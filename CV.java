@@ -17,4 +17,26 @@ public class CV {
 		this.competences = competences;
 		this.attentes = attentes;
 	 }
+
+	public void affiche() {
+
+		String competencesLisible = "";
+		
+		for (int i = 0; i < competences.length; i++) {
+			if (i != competences.length - 1) {
+		
+				competencesLisible += competences[i] + ", ";
+		
+			} else {
+				competencesLisible += competences[i] + ".";
+			}
+		}
+		    
+		System.out.println("nom : " + this.nom + 
+			    "\nprenom : " + this.prenom +
+			    "\nFormation : " + this.formation +
+			    "\nExpériences : " + this.experience +
+			    "\nCompétences : " + competencesLisible +
+			    "\nAttentes : " + this.attentes + "\n");
+	}
 }
