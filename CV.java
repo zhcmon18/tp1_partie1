@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class CV {
 	 
@@ -38,5 +39,29 @@ public class CV {
 			    "\nExpériences : " + this.experience +
 			    "\nCompétences : " + competencesLisible +
 			    "\nAttentes : " + this.attentes + "\n");
+	}
+
+	public static void main(String args[]) {
+		System.out.println("Bienvenue chez Barrette!\n");
+
+		CV cvJustin = new CV("Fofana", "Justin", "420.AA Informatique de gestion", 2,
+				new String[] { "pro du vélo", "dance comme un arbre" }, "Que tous le monde s'amuse bien :)");
+
+		CV cvYoucef = new CV("Bokari", "Oussama Youcef", "420.AA Informatique de gestion", 2,
+				new String[] { "pro du vélo", "dance comme un crabe" }, "Que tous le monde s'amuse bien :)");
+
+		CV cvPavel = new CV("Zaharciuc", "Pavel", "420.AA Informatique de gestion", 2,
+				new String[] { "pro du vélo", "dance comme un crabe" }, "Que tous le monde s'amuse bien :)");
+
+		ArrayList<CV> equipe = new ArrayList<>();
+
+		equipe.add(cvJustin);
+		equipe.add(cvYoucef);
+		equipe.add(cvPavel);
+
+		for (CV cv : equipe) {
+			cv.affiche();
+		}
+
 	}
 }
